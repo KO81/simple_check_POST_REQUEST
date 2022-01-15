@@ -3,7 +3,7 @@
 // simplified POST and REQUEST check
 // just paste in the right before POST or REQUEST statemant.
 
-$arr=('all the bad words array');
+$Bad=('all the bad words array');
 
 function is_function($what){
   if(function_exists($what)||class_exists($what,false)){
@@ -18,7 +18,7 @@ function array_in_string($str, array $arr){
 };
 
 foreach($_POST as $key => $value){
-  if(array_in_string($key,$Bad_)&&array_in_string($value,$Bad_)){
+  if(array_in_string($key,$Bad)&&array_in_string($value,$Bad)){
     http_response_code(401);die();
     // or whatever u like
     };
