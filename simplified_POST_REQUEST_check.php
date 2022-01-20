@@ -18,7 +18,7 @@ function array_in_string($str, array $arr){
 };
 
 foreach($_POST as $key => $value){
-  if(array_in_string($key,$Bad)&&array_in_string($value,$Bad)){
+  if(array_in_string($key,$Bad)||array_in_string($value,$Bad)){
     http_response_code(401);die();
     // or whatever u like
     };
